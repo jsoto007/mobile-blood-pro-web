@@ -4,20 +4,6 @@ import { useId } from 'react'
 import { Container } from '@/components/Container'
 import bmLogo from '../images/logos/bmLogo.svg'
 
-import clsx from 'clsx'
-import { AppDemo } from '@/components/AppDemo'
-import { AppStoreLink } from '@/components/AppStoreLink'
-import { Button } from '@/components/Button'
-import { PhoneFrame } from '@/components/PhoneFrame'
-import logoBbc from '@/images/logos/bbc.svg'
-import logoCbs from '@/images/logos/cbs.svg'
-import logoCnn from '@/images/logos/cnn.svg'
-import logoFastCompany from '@/images/logos/fast-company.svg'
-import logoForbes from '@/images/logos/forbes.svg'
-import logoHuffpost from '@/images/logos/huffpost.svg'
-import logoTechcrunch from '@/images/logos/techcrunch.svg'
-import logoWired from '@/images/logos/wired.svg'
-
 function BackgroundIllustration(props) {
   let id = useId()
 
@@ -122,9 +108,11 @@ export function Hero() {
             Gentle hands Expert care.
             </h2>
             <p className="mt-6 text-lg text-gray-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-2000 animate-ease-in">
-              By leveraging insights from our network of industry insiders,
-              you’ll know exactly when to buy to maximize profit, and exactly
-              when to sell to avoid painful losses.
+              We provide safe and high-quality phlebotomy services in the comfort of your home while strictly adhering to safety standards.
+              <br />
+             <a href="tel:5165081898" className="-mt-20 text-[#084072] text-sm font-semibold hover:underline ">
+               ☎ (516) 508 1898
+             </a>
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
 
