@@ -1,11 +1,13 @@
-import { useId } from 'react'
 import Image from 'next/image'
-import clsx from 'clsx'
 
+import { useId } from 'react'
+import { Container } from '@/components/Container'
+import bmLogo from '../images/logos/bmLogo.svg'
+
+import clsx from 'clsx'
 import { AppDemo } from '@/components/AppDemo'
 import { AppStoreLink } from '@/components/AppStoreLink'
 import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
 import logoBbc from '@/images/logos/bbc.svg'
 import logoCbs from '@/images/logos/cbs.svg'
@@ -100,14 +102,26 @@ function PlayIcon(props) {
 
 export function Hero() {
   return (
-    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36 flex items-center justify-center">
       <Container>
-        <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
+        <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-              Invest at the perfect time.
-            </h1>
-            <p className="mt-6 text-lg text-gray-600">
+
+              <div className="-mt-12 flex flex-row items-center justify-start text-left sm:justify-center sm:text-left">
+                <Image 
+                  className="h-32 w-auto drop-shadow-xl border-s-orange-700 mb-4 sm:mb-0 sm:mr-4 animate-fade-down animate-delay-200 animate-ease-in"
+                  src={bmLogo}
+                  alt="BMF logo"
+                />
+                <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 font-serif drop-shadow-xl animate-fade-down animate-delay-500 animate-ease-in">
+                  Mobole Blood Pro
+                </h1>
+              </div>
+          
+            <h2 className="text-xl font-medium tracking-tight text-gray-900 mt-4 text-left sm:text-center animate-fade-down animate-delay-1000 animate-ease-in">
+            Gentle hands Expert care.
+            </h2>
+            <p className="mt-6 text-lg text-gray-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-2000 animate-ease-in">
               By leveraging insights from our network of industry insiders,
               you’ll know exactly when to buy to maximize profit, and exactly
               when to sell to avoid painful losses.
@@ -118,7 +132,7 @@ export function Hero() {
             
             </div>
           </div>
-          <div className="relative -mt-12 sm:mt-6 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6 max-w-xs mx-auto">
+          <div className="relative -mt-12 sm:mt-4 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6 max-w-xs mx-auto">
             <BackgroundIllustration className="absolute top-4 left-1/2 h-[1026px] w-[1026px] -translate-x-1/3 mask-[linear-gradient(to_bottom,white_20%,transparent_75%)] stroke-gray-300/70 sm:top-10 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
             <div className="-mx-2 h-[300px] mask-[linear-gradient(to_bottom,white_60%,transparent)] px-4 sm:mx-0 lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
             </div>
