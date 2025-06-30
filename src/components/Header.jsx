@@ -1,12 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import {
-  Popover,
-  PopoverButton,
-  PopoverBackdrop,
-  PopoverPanel,
-} from '@headlessui/react'
+import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
@@ -42,8 +37,7 @@ function ChevronUpIcon(props) {
 
 function MobileNavLink(props) {
   return (
-    <PopoverButton
-      as={Link}
+    <Link
       className="block text-base/7 tracking-tight text-gray-700"
       {...props}
     />
@@ -51,6 +45,8 @@ function MobileNavLink(props) {
 }
 
 export function Header() {
+  const [open, setOpen] = useState(false)
+
   return (
     <header>
       <nav>
@@ -64,68 +60,56 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <Popover className="lg:hidden">
-              {({ open }) => (
-                <>
-                  <PopoverButton
-                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 focus:not-data-focus:outline-hidden active:stroke-gray-900"
-                    aria-label="Toggle site navigation"
-                  >
-                    {({ open }) =>
-                      open ? (
-                        <ChevronUpIcon className="h-6 w-6" />
-                      ) : (
-                        <MenuIcon className="h-6 w-6" />
-                      )
-                    }
-                  </PopoverButton>
-                  <AnimatePresence initial={false}>
-                    {open && (
-                      <>
-                        <PopoverBackdrop
-                          static
-                          as={motion.div}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          className="fixed inset-0 z-0 bg-gray-300/60 backdrop-blur-sm"
-                        />
-                        <PopoverPanel
-                          static
-                          as={motion.div}
-                          initial={{ opacity: 0, y: -32 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{
-                            opacity: 0,
-                            y: -32,
-                            transition: { duration: 0.2 },
-                          }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pt-32 pb-6 shadow-2xl shadow-gray-900/20"
-                        >
-                          <div className="space-y-4">
-                            <MobileNavLink href="/#features">
-                              About
-                            </MobileNavLink>
-                            <MobileNavLink href="/#reviews">
-                              Scheduling
-                            </MobileNavLink>
-                            <MobileNavLink href="/#pricing">
-                              Company
-                            </MobileNavLink>
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
-                          </div>
-                          <div className="mt-8 flex flex-col gap-4">
-                         
-                          </div>
-                        </PopoverPanel>
-                      </>
-                    )}
-                  </AnimatePresence>
-                </>
+            {/* Mobile menu button */}
+            <button
+              type="button"
+              aria-label="Toggle site navigation"
+              className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 focus:outline-none active:stroke-gray-900 lg:hidden"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? (
+                <ChevronUpIcon className="h-6 w-6" />
+              ) : (
+                <MenuIcon className="h-6 w-6" />
               )}
-            </Popover>
+            </button>
+
+            {/* Mobile menu overlay and panel */}
+            {open && (
+              <>
+                {/* Backdrop */}
+                <div
+                  onClick={() => setOpen(false)}
+                  className="fixed inset-0 z-0 bg-gray-300/60 backdrop-blur-sm"
+                />
+                {/* Panel */}
+                <div
+                  className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pt-32 pb-6 shadow-2xl shadow-gray-900/20
+                    transition-transform duration-200 ease-out
+                    "
+                  style={{ transformOrigin: 'top' }}
+                >
+                  <div className="space-y-4">
+                    <MobileNavLink href="/#features" onClick={() => setOpen(false)}>
+                      About
+                    </MobileNavLink>
+                    <MobileNavLink href="/#reviews" onClick={() => setOpen(false)}>
+                      Scheduling
+                    </MobileNavLink>
+                    <MobileNavLink href="/#pricing" onClick={() => setOpen(false)}>
+                      Company
+                    </MobileNavLink>
+                    <MobileNavLink href="/#faqs" onClick={() => setOpen(false)}>
+                      FAQs
+                    </MobileNavLink>
+                  </div>
+                  <div className="mt-8 flex flex-col gap-4"></div>
+                </div>
+              </>
+            )}
+
             <div className="flex items-center gap-6 max-lg:hidden">
-         
+              {/* Add any desktop-only buttons or links here */}
             </div>
           </div>
         </Container>

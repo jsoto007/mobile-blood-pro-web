@@ -1,7 +1,6 @@
 'use client'
 
 import { Fragment, useEffect, useId, useRef, useState } from 'react'
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useDebouncedCallback } from 'use-debounce'
@@ -10,16 +9,7 @@ import { AppScreen } from '@/components/AppScreen'
 import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
-import {
-  DiageoLogo,
-  LaravelLogo,
-  MirageLogo,
-  ReversableLogo,
-  StatamicLogo,
-  StaticKitLogo,
-  TransistorLogo,
-  TupleLogo,
-} from '@/components/StockLogos'
+
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
@@ -258,62 +248,99 @@ function usePrevious(value) {
 }
 
 function FeaturesDesktop() {
-  let [changeCount, setChangeCount] = useState(0)
   let [selectedIndex, setSelectedIndex] = useState(0)
-  let prevIndex = usePrevious(selectedIndex)
+  let [changeCount, setChangeCount] = useState(0)
+  let prevIndexRef = useRef()
+  useEffect(() => {
+    prevIndexRef.current = selectedIndex
+  }, [selectedIndex])
+  let prevIndex = prevIndexRef.current
   let isForwards = prevIndex === undefined ? true : selectedIndex > prevIndex
 
-  let onChange = useDebouncedCallback(
-    (selectedIndex) => {
-      setSelectedIndex(selectedIndex)
-      setChangeCount((changeCount) => changeCount + 1)
-    },
-    100,
-    { leading: true },
-  )
+  // Increment changeCount when selectedIndex changes
+  useEffect(() => {
+    setChangeCount((count) => count + 1)
+  }, [selectedIndex])
 
   return (
-    <TabGroup
-      className="grid grid-cols-12 items-center gap-8 lg:gap-16 xl:gap-24"
-      selectedIndex={selectedIndex}
-      onChange={onChange}
-      vertical
-    >
-      <TabList className="relative z-10 order-last col-span-6 space-y-6">
-        {features.map((feature, featureIndex) => (
-          <div
-            key={feature.name}
-            className="relative rounded-2xl transition-colors hover:bg-gray-800/30"
-          >
-            {featureIndex === selectedIndex && (
-              <motion.div
-                layoutId="activeBackground"
-                className="absolute inset-0 bg-gray-800"
-                initial={{ borderRadius: 16 }}
-              />
-            )}
-            <div className="relative z-10 p-8">
-              <feature.icon className="h-8 w-8" />
-              <h3 className="mt-6 text-lg font-semibold text-white">
-                <Tab className="text-left data-selected:not-data-focus:outline-hidden">
+    <div className="grid grid-cols-12 items-center gap-8 lg:gap-16 xl:gap-24">
+      <div
+        role="tablist"
+        aria-orientation="vertical"
+        className="relative z-10 order-last col-span-6 space-y-6"
+      >
+        {features.map((feature, featureIndex) => {
+          const isSelected = featureIndex === selectedIndex
+          return (
+            <div
+              key={feature.name}
+              className={clsx(
+                'relative rounded-2xl transition-colors cursor-pointer',
+                isSelected ? 'bg-gray-800' : 'hover:bg-gray-800/30'
+              )}
+              role="tab"
+              tabIndex={isSelected ? 0 : -1}
+              aria-selected={isSelected}
+              onClick={() => setSelectedIndex(featureIndex)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setSelectedIndex(featureIndex)
+                }
+              }}
+              id={`tab-${featureIndex}`}
+              aria-controls={`tabpanel-${featureIndex}`}
+            >
+              {isSelected && (
+                <motion.div
+                  layoutId="activeBackground"
+                  className="absolute inset-0 bg-gray-800 rounded-2xl"
+                  initial={{ borderRadius: 16 }}
+                />
+              )}
+              <div className="relative z-10 p-8">
+                <feature.icon className="h-8 w-8" />
+                <h3 className="mt-6 text-lg font-semibold text-white">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
-                </Tab>
-              </h3>
-              <p className="mt-2 text-sm text-gray-400">
-                {feature.description}
-              </p>
+                </h3>
+                <p className="mt-2 text-sm text-gray-400">{feature.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </TabList>
-      <div className="relative col-span-6">
+          )
+        })}
+      </div>
+      <div
+        className="relative col-span-6"
+        role="tabpanel"
+        tabIndex={0}
+        id={`tabpanel-${selectedIndex}`}
+        aria-labelledby={`tab-${selectedIndex}`}
+      >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <CircleBackground color="#13B5C8" className="animate-spin-slower" />
         </div>
-        {/* {Phone was here} */}
+        {/* Render selected feature screen with animation */}
+        <AnimatePresence mode="wait" initial={false}>
+          {features.map((feature, featureIndex) =>
+            featureIndex === selectedIndex ? (
+              <motion.div
+                key={feature.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="relative"
+              >
+                <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
+                  <feature.screen animated custom={{ changeCount, isForwards }} />
+                </PhoneFrame>
+              </motion.div>
+            ) : null
+          )}
+        </AnimatePresence>
       </div>
-    </TabGroup>
+    </div>
   )
 }
 
