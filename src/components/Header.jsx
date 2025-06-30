@@ -90,17 +90,14 @@ export function Header() {
                   style={{ transformOrigin: 'top' }}
                 >
                   <div className="space-y-4">
-                    <MobileNavLink href="/#features" onClick={() => setOpen(false)}>
+                    <MobileNavLink href="/#about" onClick={() => setOpen(false)}>
                       About
                     </MobileNavLink>
-                    <MobileNavLink href="/#reviews" onClick={() => setOpen(false)}>
+                    <MobileNavLink href="/#scheduling" onClick={() => setOpen(false)}>
                       Scheduling
                     </MobileNavLink>
-                    <MobileNavLink href="/#pricing" onClick={() => setOpen(false)}>
-                      Company
-                    </MobileNavLink>
-                    <MobileNavLink href="/#faqs" onClick={() => setOpen(false)}>
-                      FAQs
+                    <MobileNavLink href="/#reviews" onClick={() => setOpen(false)}>
+                      Reviews
                     </MobileNavLink>
                   </div>
                   <div className="mt-8 flex flex-col gap-4"></div>
