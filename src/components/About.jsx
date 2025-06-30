@@ -40,7 +40,7 @@ export default function About() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-indigo-600">Safety & Comfortability</p>
+              <p className="text-base font-semibold leading-7 text-bmpBlue">Safety & Comfortability</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">At-Home Phlebotomy Excellence</h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
               Experience our safe and comfortable at-home phlebotomy services delivered by highly trained professionals.
@@ -65,19 +65,19 @@ export default function About() {
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
-                <CalendarDaysIcon className="mt-1 h-5 w-5 flex-none fill-indigo-600" aria-hidden="true" />
+                <CalendarDaysIcon className="mt-1 h-5 w-5 flex-none fill-bmpBlue" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold text-gray-900">Schedule an appointment.</strong> Schedule your appointment and our team representative will confirm the time that works for you.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                <BookmarkSquareIcon className="mt-1 h-5 w-5 flex-none fill-indigo-600" aria-hidden="true" />
+                <BookmarkSquareIcon className="mt-1 h-5 w-5 flex-none fill-bmpBlue" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold text-gray-900">Blood draw.</strong> A qualified professional from our team will collect your blood sample while adhering to rigorous safety standards.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <TruckIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                  <TruckIcon className="mt-1 h-5 w-5 flex-none text-bmpBlue" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold text-gray-900">Secure delivery.</strong> The blood sample will be carefully and professionally packaged to ensure a secure delivery to the laboratory.
                   </span>
