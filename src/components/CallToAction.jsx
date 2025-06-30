@@ -1,6 +1,7 @@
 import { AppStoreLink } from '@/components/AppStoreLink'
 import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
+import ActionBtn from './ActionBtn'
 
 export function CallToAction() {
   return (
@@ -20,7 +21,8 @@ export function CallToAction() {
           Book your mobile phlebotomy appointment in under a minute for safe, professional blood collection at home.
           </p>
           <div className="mt-8 flex justify-center">
-            <AppStoreLink color="white" />
+            <ActionBtn />
+            {/* <AppStoreLink color="white" /> */}
           </div>
         </div>
       </Container>

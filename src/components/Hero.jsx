@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useId } from 'react'
 import { Container } from '@/components/Container'
 import bmLogo from '../images/logos/bmLogo.svg'
+import ActionBtn from './ActionBtn'
 
 function BackgroundIllustration(props) {
   let id = useId()
@@ -115,6 +116,7 @@ export function Hero() {
              </a>
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
+              <ActionBtn />
 
               {/* {Here is were the btn does to schedule it.} */}
             
