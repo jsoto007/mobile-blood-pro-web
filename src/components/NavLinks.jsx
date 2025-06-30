@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -8,11 +8,17 @@ export function NavLinks() {
   let [hoveredIndex, setHoveredIndex] = useState(null)
   let timeoutRef = useRef(null)
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      document.documentElement.style.scrollBehavior = 'smooth';
+    }
+  }, []);
+
   return [
-    ['About', '/#features'],
+    ['About', '/#about'],
     ['Scheduling', '/#scheduling'],
     ['Reviews', '/#reviews'],
-    ['Company', '/#pricing'],
+
 
   ].map(([label, href], index) => (
     <Link
