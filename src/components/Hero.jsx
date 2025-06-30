@@ -104,10 +104,10 @@ export function Hero() {
                 </h1>
               </div>
           
-            <h2 className="text-xl font-medium tracking-tight text-gray-900 mt-4 text-left sm:text-center animate-fade-down animate-delay-1000 animate-ease-in">
+            <h2 className="text-xl font-medium tracking-tight text-slate-900 mt-4 text-left sm:text-center animate-fade-down animate-delay-1000 animate-ease-in">
             Gentle hands Expert care.
             </h2>
-            <p className="mt-6 text-lg text-gray-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-2000 animate-ease-in">
+            <p className="mt-6 text-lg text-slate-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-2000 animate-ease-in">
               We provide safe and high-quality phlebotomy services in the comfort of your home while strictly adhering to safety standards.
               <br />
              <a href="tel:5165081898" className="-mt-20 text-[#084072] text-sm font-semibold hover:underline ">
