@@ -99,7 +99,7 @@ export function Hero() {
                   src={bmLogo}
                   alt="BMF logo"
                 />
-                <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 font-serif drop-shadow-xl animate-fade-down animate-delay-500 animate-ease-in">
+                <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-[#084072] font-serif drop-shadow-xl animate-fade-down animate-delay-500 animate-ease-in">
                   Mobole Blood Pro
                 </h1>
               </div>
