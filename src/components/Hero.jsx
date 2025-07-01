@@ -100,7 +100,7 @@ export function Hero() {
                   src={bmLogo}
                   alt="BMF logo"
                 />
-                <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-[#084072] font-serif drop-shadow-xl animate-fade-down animate-delay-500 animate-ease-in">
+                <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-[#084072] font-serif drop-shadow-xl animate-fade-down animate-delay-600 animate-ease-in">
                   Mobole Blood Pro
                 </h1>
               </div>
@@ -108,17 +108,15 @@ export function Hero() {
             <h2 className="text-xl font-medium tracking-tight text-slate-900 mt-4 text-left sm:text-center animate-fade-down animate-delay-1000 animate-ease-in">
             Gentle hands Expert care.
             </h2>
-            <p className="mt-6 text-lg text-slate-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-2000 animate-ease-in">
+            <p className="mt-6 text-lg text-slate-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-1400 animate-ease-in">
               We provide safe and high-quality phlebotomy services in the comfort of your home while strictly adhering to safety standards.
               <br />
-             <a href="tel:5165081898" className="-mt-20 text-[#084072] text-sm font-semibold hover:underline ">
+             <a href="tel:5165081898" className="-mt-20 text-[#084072] text-sm font-semibold hover:underline animate-fade-down animate-delay-1800 animate-ease-in">
                ☎ (516) 508 1898
              </a>
             </p>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4 animate-fade-down animate-delay-2200 animate-ease-in">
               <ActionBtn />
-
-              {/* {Here is were the btn does to schedule it.} */}
             
             </div>
           </div>
