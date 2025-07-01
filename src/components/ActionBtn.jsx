@@ -2,9 +2,11 @@ export default function ActionBtn() {
 
     return (
 
-        <button
-          type="submit"
-          className=" font-serif flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-neutral-200 backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-2 py-1 overflow-hidden border-2 rounded-full group transition-colors duration-300 hover:bg-[#084072] active:bg-[#084072] focus:bg-[#084072] text-black hover:text-white active:text-white focus:text-white"
+        <a
+          href="https://calendly.com/mobilebloodpro/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-serif flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-neutral-200 backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-2 py-1 overflow-hidden border-2 rounded-full group transition-colors duration-300 hover:bg-[#084072] active:bg-[#084072] focus:bg-[#084072] text-black hover:text-white active:text-white focus:text-white"
         >
           Scheduling
           <svg
@@ -17,7 +19,7 @@ export default function ActionBtn() {
               className="fill-gray-800 group-hover:fill-gray-200 group-active:fill-gray-200 group-focus:fill-gray-200"
             ></path>
           </svg>
-        </button>
+        </a>
         
     )
 }

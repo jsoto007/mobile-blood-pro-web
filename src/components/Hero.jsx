@@ -101,7 +101,7 @@ export function Hero() {
                   alt="BMF logo"
                 />
                 <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-[#084072] font-serif drop-shadow-xl animate-fade-down animate-delay-600 animate-ease-in">
-                  Mobole Blood Pro
+                  Mobile Blood Pro
                 </h1>
               </div>
           
