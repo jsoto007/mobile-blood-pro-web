@@ -1,3 +1,19 @@
+# Project License Notice
+
+This web application was developed by **SotoDev.com** for a client using licensed Tailwind Plus components and templates under the appropriate Tailwind Labs license. 
+
+The project code and implementation are the intellectual property of SotoDev.com unless otherwise noted. The client is granted full rights to use and deploy the application as delivered.
+
+All branding elements, including logos, trademarks, and service marks provided by the client (Mobile Blood Pro), are the exclusive property of the client. These assets are protected and may not be reused, redistributed, or modified outside the context of this project.
+
+The software is delivered as-is. Any future maintenance, modification, or support will be subject to a separate agreement.
+
+Please contact [hello@sotodev.com](mailto:hello@sotodev.com) with any questions regarding licensing or usage.
+
+---
+
+
+
 # Tailwind Plus License
 
 ## Personal License
