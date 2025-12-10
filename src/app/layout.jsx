@@ -11,11 +11,11 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    template: '%s - BMP',
-    default: 'Mobile Blood Pro',
+    template: '%s | Mobile Blood Pro',
+    default: 'At-Home Phlebotomy Orlando & Central Florida',
   },
   description:
-    'By leveraging insights from our network of industry insiders, you’ll know exactly when to buy to maximize profit, and exactly when to sell to avoid painful losses.',
+    'At-home blood draw Orlando & mobile blood draw near me; Mobile Blood Pro serves Orange, Seminole, Lake, Sumter, and Villages ZIPs 32801–32837, 32701–32792, 34705–34789.',
 }
 
 export default function RootLayout({ children }) {

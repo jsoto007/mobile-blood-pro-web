@@ -15,10 +15,10 @@ export function CallToAction() {
       <Container className="relative">
         <div className="mx-auto max-w-md sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
-          Book Your At Home Blood Draw
+            Book an At-Home Blood Draw in Orlando & Central Florida
           </h2>
           <p className="mt-4 text-lg text-gray-300">
-          Book your mobile phlebotomy appointment in under a minute for safe, professional blood collection at home.
+            Schedule a mobile phlebotomy visit, mobile blood draw, or home lab testing session near you—Orlando, Altamonte Springs, Winter Park, and beyond.
           </p>
           <div className="mt-8 flex justify-center">
             <ActionBtn />

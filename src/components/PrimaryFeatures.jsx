@@ -15,23 +15,23 @@ const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
   {
-    name: 'Schedule an appointment',
+    name: 'At-Home Phlebotomy Visits',
     description:
-      'Schedule your appointment and our team representative will confirm the time that works for you.',
+      'Phlebotomists arrive at your Orlando, Altamonte Springs, or Winter Springs address for gentle mobile blood draw services that feel like concierge care.',
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
-    name: 'Blood draw',
+    name: 'Mobile Blood Draw Logistics',
     description:
-      'A qualified professional from our team will collect your blood sample while adhering to rigorous safety standards.',
+      'We coordinate ZIP 32771, 32708, 32801, and 34736 appointments, arriving with sanitized kits, temperature-controlled coolers, and travel-ready paperwork.',
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: 'Secure delivery',
+    name: 'Home Lab Testing Coordination',
     description:
-      'The blood sample will be carefully and professionally packaged to ensure a secure delivery to the laboratory.',
+      'Florida home lab services stay on schedule with courier handoffs, lab partnerships, and patient support for chronic care follow-ups.',
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -439,16 +439,16 @@ export function PrimaryFeatures() {
   return (
     <section
       id="features"
-      aria-label="Features for investing all your money"
+      aria-label="Features for Central Florida mobile phlebotomy and home lab testing"
       className="bg-gray-900 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-3xl font-medium tracking-tight text-white">
-            About Our Services
+            Trusted Mobile Blood Draw & Home Lab Testing for Central Florida
           </h2>
           <p className="mt-2 text-lg text-gray-400">
-            Experience our safe and comfortable at-home phlebotomy services delivered by highly trained professionals. We prioritize your safety and comfort while ensuring professional care in the convenience of your own home.
+            Mobile Blood Pro makes scheduling a home lab technician easy. Our mobile blood draw, at-home phlebotomy, and Florida home lab services cover Lake, Seminole, and Orange counties plus the surrounding postal areas looking for “mobile phlebotomy near me.”
           </p>
         </div>
       </Container>

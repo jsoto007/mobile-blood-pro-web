@@ -98,20 +98,29 @@ export function Hero() {
                 <Image 
                   className="h-32 w-auto drop-shadow-xl border-s-orange-700 mb-4 sm:mb-0 sm:mr-4 animate-fade-down animate-delay-200 animate-ease-in"
                   src={bmLogo}
-                  alt="BMF logo"
+                  alt="Mobile Blood Pro logo for Central Florida phlebotomy"
                 />
-                <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-[#084072] font-serif drop-shadow-xl animate-fade-down animate-delay-600 animate-ease-in">
-                  Mobile Blood Pro
-                </h1>
+                <div className="flex flex-col">
+                  <p className="text-xs font-semibold text-[#084072] uppercase tracking-[0.4em] animate-fade-down animate-delay-600 animate-ease-in">
+                    Certified phlebotomy ✦ Orlando & Central Florida
+                  </p>
+                  <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-[#084072] font-serif drop-shadow-xl animate-fade-down animate-delay-800 animate-ease-in">
+                    Mobile Phlebotomy & At-Home Blood Draws
+                  </h1>
+                </div>
               </div>
           
             <h2 className="text-xl font-medium tracking-tight text-slate-900 mt-4 text-left sm:text-center animate-fade-down animate-delay-1000 animate-ease-in">
-            Gentle hands Expert care.
+              Same-day mobile blood draw near me in Orlando, Altamonte Springs, and Winter Springs.
             </h2>
-            <p className="mt-6 text-lg text-slate-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-1400 animate-ease-in">
-              We provide safe and high-quality phlebotomy services in the comfort of your home while strictly adhering to safety standards.
-              <br />
-             <a href="tel:5165081898" className="-mt-20 text-[#084072] text-sm font-semibold hover:underline animate-fade-down animate-delay-1800 animate-ease-in">
+            <p className="mt-4 text-lg text-slate-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-1400 animate-ease-in">
+              Certified phlebotomists, sanitized kits, and Florida home lab testing all handled from the comfort of your home. 
+            </p>
+            <p className="mt-2 text-sm font-semibold text-[#084072] text-left sm:text-center animate-fade-down animate-delay-1600 animate-ease-in">
+              Serving Orlando, Altamonte Springs, Winter Springs, and surrounding Central Florida communities.
+            </p>
+            <p className="text-sm mt-2 text-slate-700 text-left sm:text-center animate-fade-down animate-delay-1800 animate-ease-in">
+             <a href="tel:5165081898" className="text-[#084072] hover:underline">
                ☎ (516) 508 1898
              </a>
             </p>
