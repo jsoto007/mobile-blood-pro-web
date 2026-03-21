@@ -58,20 +58,20 @@ export default function About() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-bmpBlue">Safety & Comfortability</p>
+              <p className="text-base font-semibold leading-7 text-[#084072]">Safety & Comfortability</p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Central Florida At-Home Phlebotomy & Home Lab Testing
+                Central Florida At-Home Phlebotomy
               </h2>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                From Orlando’s neighborhoods to the Villages corridor, Mobile Blood Pro delivers certified at-home phlebotomy, mobile blood draw visits, and Florida home lab services right to you.
+                Founded by certified phlebotomist <span className="font-semibold text-gray-900">Arelis Perez</span>, Mobile Blood Pro delivers premium at-home phlebotomy, mobile blood draw visits, and Florida home lab services directly to you.
               </p>
             </div>
           </div>
         </div>
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <div className="w-[36rem] sm:w-[42rem] max-w-none rounded-xl">
+          <div className="w-[36rem] sm:w-[42rem] max-w-none rounded-2xl">
             <Image
-              className="w-[36rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[42rem] opacity-70"
+              className="w-[36rem] max-w-none rounded-2xl shadow-2xl ring-1 ring-gray-900/5 sm:w-[42rem] object-cover"
               src={arelisPhoto}
               alt="Certified phlebotomist delivering an at-home blood draw in Orlando, FL"
             />
@@ -106,23 +106,26 @@ export default function About() {
               <p className="mt-8 text-base text-gray-700">
                 We serve caregivers, seniors, and busy professionals looking for mobile blood draw trust across Central Florida. Our trained professionals use sanitary tools, temperature-controlled transport, and concierge ease so you can focus on what matters.
               </p>
-              <section className="mt-10 space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+              <section className="mt-12 border-t border-gray-100 pt-10">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-light tracking-tight text-[#084072]">
                     Areas We Serve
                   </h3>
-                  <p className="mt-1 text-sm text-gray-600">
-                    Mobile Blood Pro is active across Orange, Seminole, Lake, Sumter, and North Orlando communities with at-home phlebotomy, “mobile blood draw near me,” and Florida home lab testing.
+                  <p className="mt-2 text-base text-gray-500 max-w-2xl font-light">
+                    Mobile Blood Pro is active across Orange, Seminole, Lake, Sumter, and North Orlando communities, delivering premium at-home phlebotomy and home lab testing.
                   </p>
                 </div>
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {locationGroups.map((group) => (
-                    <article key={group.title} className="rounded-xl border border-gray-100 bg-gray-50 p-4 text-sm text-gray-600 shadow-inner">
-                      <h4 className="text-sm font-semibold text-gray-900">{group.title}</h4>
-                      <p className="mt-1 text-xs uppercase tracking-[0.3em] text-gray-400">
-                        {group.label}
+                    <article key={group.title} className="group relative flex flex-col items-start justify-between rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition duration-300 hover:shadow-md hover:ring-gray-900/10">
+                      <div className="flex items-center gap-x-3 mb-4">
+                        <div className="h-1 w-6 rounded-full bg-[#06b6d4]"></div>
+                        <h4 className="text-base font-semibold text-gray-900">{group.title}</h4>
+                      </div>
+                      <p className="text-sm font-medium text-[#084072] uppercase tracking-[0.15em] mb-3">
+                        {group.label.replace('ZIP coverage: ', 'ZIP: ')}
                       </p>
-                      <p className="mt-2 leading-relaxed text-xs text-gray-600">{group.description}</p>
+                      <p className="leading-relaxed text-sm text-gray-600 font-light">{group.description}</p>
                     </article>
                   ))}
                 </div>

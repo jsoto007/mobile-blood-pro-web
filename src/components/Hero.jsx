@@ -94,39 +94,45 @@ export function Hero() {
         <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
 
-              <div className="-mt-12 flex flex-row items-center justify-start text-left sm:justify-center sm:text-left">
+              <div className="-mt-12 flex flex-col sm:flex-row items-center justify-start text-left sm:justify-center sm:text-left">
                 <Image 
-                  className="h-32 w-auto drop-shadow-xl border-s-orange-700 mb-4 sm:mb-0 sm:mr-4 animate-fade-down animate-delay-200 animate-ease-in"
+                  className="h-28 w-auto mb-6 sm:mb-0 sm:mr-8 animate-fade-down animate-delay-200 animate-ease-in"
                   src={bmLogo}
                   alt="Mobile Blood Pro logo for Central Florida phlebotomy"
                 />
                 <div className="flex flex-col">
-                  <p className="text-xs font-semibold text-[#084072] uppercase tracking-[0.4em] animate-fade-down animate-delay-600 animate-ease-in">
-                    Certified phlebotomy ✦ Orlando & Central Florida
+                  <p className="text-sm font-semibold text-[#06b6d4] uppercase tracking-[0.2em] mb-2 animate-fade-down animate-delay-600 animate-ease-in">
+                    Orlando & Central Florida
                   </p>
-                  <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-[#084072] font-serif drop-shadow-xl animate-fade-down animate-delay-800 animate-ease-in">
-                    Mobile Phlebotomy & At-Home Blood Draws
+                  <h1 className="text-4xl sm:text-6xl font-light tracking-tight text-[#084072] drop-shadow-sm animate-fade-down animate-delay-800 animate-ease-in leading-[1.1]">
+                    At-Home <br className="hidden sm:block" /> Phlebotomy
                   </h1>
                 </div>
               </div>
           
-            <h2 className="text-xl font-medium tracking-tight text-slate-900 mt-4 text-left sm:text-center animate-fade-down animate-delay-1000 animate-ease-in">
-              Same-day mobile blood draw near me in Orlando, Altamonte Springs, and Winter Springs.
-            </h2>
-            <p className="mt-4 text-lg text-slate-600 text-left sm:text-center max-w-xl mx-auto animate-fade-down animate-delay-1400 animate-ease-in">
-              Certified phlebotomists, sanitized kits, and Florida home lab testing all handled from the comfort of your home. 
+            <p className="mt-8 text-xl sm:text-2xl leading-relaxed text-slate-700 font-light text-left sm:text-center max-w-2xl mx-auto animate-fade-down animate-delay-1000 animate-ease-in">
+              We provide safe and high-quality phlebotomy services in the comfort of your home while strictly adhering to safety standards.
             </p>
-            <p className="mt-2 text-sm font-semibold text-[#084072] text-left sm:text-center animate-fade-down animate-delay-1600 animate-ease-in">
-              Serving Orlando, Altamonte Springs, Winter Springs, and surrounding Central Florida communities.
-            </p>
-            <p className="text-sm mt-2 text-slate-700 text-left sm:text-center animate-fade-down animate-delay-1800 animate-ease-in">
-             <a href="tel:5165081898" className="text-[#084072] hover:underline">
-               ☎ (516) 508 1898
-             </a>
-            </p>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4 animate-fade-down animate-delay-2200 animate-ease-in">
-              <ActionBtn />
             
+            <div className="mt-10 flex flex-col items-start sm:items-center justify-start sm:justify-center animate-fade-down animate-delay-1200 animate-ease-in">
+              <a 
+                href="tel:5165081898" 
+                className="group relative inline-flex items-center justify-center px-8 py-3.5 text-lg font-medium text-white bg-[#084072] rounded-full overflow-hidden transition-all hover:scale-105 shadow-md hover:shadow-xl hover:bg-[#062c54] focus:outline-none focus:ring-2 focus:ring-[#084072] focus:ring-offset-2"
+              >
+                <span className="relative flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
+                  </svg>
+                  (516) 508 1898
+                </span>
+              </a>
+              <p className="mt-3 text-sm font-medium text-slate-500 text-left sm:text-center">
+                Call today to schedule your mobile blood draw.
+              </p>
+            </div>
+            
+            <div className="mt-8 flex flex-wrap justify-start sm:justify-center gap-x-6 gap-y-4 animate-fade-down animate-delay-1400 animate-ease-in">
+              <ActionBtn />
             </div>
           </div>
           <div className="relative -mt-12 sm:mt-4 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6 max-w-xs mx-auto">

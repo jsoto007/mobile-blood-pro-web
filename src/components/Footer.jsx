@@ -2,50 +2,65 @@ import Image from 'next/image'
 import Link from 'next/link'
 import mbmFullLogo from '../images/logos/mbpFullLogo.png'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { TextField } from '@/components/Fields'
-import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
-import qrCode from '@/images/qr-code.svg'
-
-function QrCodeBorder(props) {
-  return (
-    <svg viewBox="0 0 96 96" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M1 17V9a8 8 0 0 1 8-8h8M95 17V9a8 8 0 0 0-8-8h-8M1 79v8a8 8 0 0 0 8 8h8M95 79v8a8 8 0 0 1-8 8h-8"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-    </svg>
-  )
-}
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200">
+    <footer className="border-t border-gray-100 bg-white">
       <Container>
-        <div className="flex flex-col items-start justify-between gap-y-12 pt-16 pb-6 lg:flex-row lg:items-center lg:py-16">
-          <div>
+        <div className="grid grid-cols-1 gap-12 pt-16 pb-12 md:grid-cols-2 lg:grid-cols-4 lg:pt-24 lg:pb-16">
+          <div className="lg:col-span-1">
             <div className="flex items-center text-gray-900">
-              <Image src={mbmFullLogo} alt="Mobile Blood Pro" className="h-12 w-auto" />
+              <Image src={mbmFullLogo} alt="Mobile Blood Pro" className="h-10 w-auto" />
             </div>
-            <nav className="mt-11 flex gap-8">
+            <p className="mt-6 text-sm text-gray-600 leading-relaxed font-light">
+              Founded by certified phlebotomist Arelis Perez, Mobile Blood Pro delivers premium at-home phlebotomy, mobile blood draw visits, and Florida home lab services directly to you.
+            </p>
+          </div>
+          <div className="lg:pl-8">
+            <h3 className="text-sm font-semibold text-[#084072] uppercase tracking-wider">Quick Links</h3>
+            <nav className="mt-6 flex flex-col gap-4 font-light">
               <NavLinks />
             </nav>
           </div>
+          <div>
+            <h3 className="text-sm font-semibold text-[#084072] uppercase tracking-wider">Contact Us</h3>
+            <ul role="list" className="mt-6 space-y-4">
+              <li>
+                <a href="tel:5165081898" className="text-sm leading-6 text-gray-600 font-light hover:text-[#06b6d4] transition-colors">
+                  (516) 508 1898
+                </a>
+              </li>
+              <li>
+                <p className="text-sm leading-6 text-gray-600 font-light">
+                  By Appointment Only
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-[#084072] uppercase tracking-wider">Service Areas</h3>
+            <ul role="list" className="mt-6 space-y-4">
+              <li className="text-sm leading-6 text-gray-600 font-light">Orlando & Winter Park</li>
+              <li className="text-sm leading-6 text-gray-600 font-light">Lake Mary & Altamonte Springs</li>
+              <li className="text-sm leading-6 text-gray-600 font-light">The Villages Corridor</li>
+              <li className="text-sm leading-6 text-gray-600 font-light">Orange, Seminole, Lake & Sumter Counties</li>
+            </ul>
+          </div>
         </div>
-        <div className="flex flex-col items-center border-t border-gray-200 pt-8 pb-12 md:flex-row-reverse md:justify-between md:pt-6">
-        <a
-          href="https://sotodev.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs hover:underline"
-        >
-          Developed by <span className='text-sm font-semibold text-gray-900'>SotoDev</span>
-        </a>
-          <p className="mt-6 text-sm text-gray-500 md:mt-0">
-            &copy; Mobile Blood Pro {new Date().getFullYear()}. All rights reserved.
+        
+        <div className="flex flex-col items-center border-t border-gray-100 pt-8 pb-12 md:flex-row-reverse md:justify-between md:pt-6">
+          <a
+            href="https://sotodev.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-gray-400 hover:text-gray-900 transition-colors"
+          >
+            Developed by <span className='text-sm font-semibold'>SotoDev</span>
+          </a>
+          <p className="mt-6 text-sm text-gray-500 font-light md:mt-0 flex items-center gap-2">
+            &copy; {new Date().getFullYear()} Mobile Blood Pro. All rights reserved.
           </p>
         </div>
       </Container>
