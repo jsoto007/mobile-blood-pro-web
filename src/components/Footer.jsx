@@ -34,6 +34,11 @@ export function Footer() {
               </li>
               <li>
                 <p className="text-sm leading-6 text-gray-600 font-light">
+                  Fax: (205) 751-9277
+                </p>
+              </li>
+              <li>
+                <p className="text-sm leading-6 text-gray-600 font-light">
                   By Appointment Only
                 </p>
               </li>

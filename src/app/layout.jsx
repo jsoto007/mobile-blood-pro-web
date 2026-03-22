@@ -42,6 +42,7 @@ export default function RootLayout({ children }) {
     description:
       'We provide safe and high-quality phlebotomy services in the comfort of your home while strictly adhering to safety standards.',
     telephone: '+1-516-508-1898',
+    faxNumber: '+1-205-751-9277',
     areaServed: [
       'Orlando',
       'Winter Park',
